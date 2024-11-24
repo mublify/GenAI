@@ -3,7 +3,7 @@ import numpy as np
 from PIL import Image
 from transformers import AutoProcessor, BlipForConditionalGeneration
 
-processor=BlipProcessor.from_pretrained('Salesforce/blip-image-captioning-base')
+processor=AutoProcessor.from_pretrained('Salesforce/blip-image-captioning-base')
 model=BlipForConditionalGeneration.from_pretrained('Salesforce/blip-image-captioning-base')
 
 def caption_image(input_image: np.ndarray):
